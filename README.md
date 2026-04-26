@@ -11,7 +11,7 @@
 ## 服务器url重写配置
 
 ### Nginx
-
+请复制以下内容至你的server block中
 ```nginx
 location / {
   if (!-e $request_filename) {
@@ -23,16 +23,18 @@ location / {
 
 ### Apache
 
-public下已有htaccess
+- public下已有htaccess
 
 ## 使用btpanel 
 
-请在网站->添加站点新建 数据库不创建 PHP版本8.0+
+- 请在网站->添加站点新建 数据库不创建 PHP版本8.0+
 
-创建完成后 在网站的配置->网站目录->运行目录下 把/选择为/public
+- 创建完成后 在网站的配置->网站目录->运行目录下 把/选择为/public
 
-若使用nginx 请 在新建的这个站点的配置->伪静态内 填入上方nginx的url重写配置
-
+- 若使用nginx 请 在新建的这个站点的配置->伪静态内 填入上方nginx的url重写配置
+## 内嵌server
+- 命令行执行composer install后,不要退出目录 在目录下 执行php think run命令即可启动
+- 若默认端口提示被占用 可执行php think run -p 你要指定的端口
 ## 致谢:
 
 [thinkphp](https://github.com/top-think/think)
