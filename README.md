@@ -1,4 +1,42 @@
 # Get-IP
 使用thinkphp8构建的获取访问ip的api, 可用于动态ip的ddns
-# Demo Api
-https://api.silveridc.cn/api/v1/ip
+
+## Demo Api
+  - https://api.silveridc.cn/api/v1/ip
+
+## 服务器url重写配置
+
+### Nginx
+
+```nginx
+location / {
+  if (!-e $request_filename) {
+    rewrite ^(.*)$ /index.php?s=$1 last;
+  break;
+  }
+}
+```
+
+### Apache
+
+public下已有htaccess
+
+## 使用btpanel 
+
+请在网站->添加站点新建 数据库不创建 PHP版本8.0+
+
+创建完成后 在网站的配置->网站目录->运行目录下 把/选择为/public
+
+若使用nginx 请 在新建的这个站点的配置->伪静态内 填入上方nginx的url重写配置
+
+## 致谢:
+
+[thinkphp](https://github.com/top-think/think)
+[think-orm](https://github.com/top-think/think-orm)
+[think-helper](https://github.com/top-think/think-helper)
+[think-trace](https://github.com/top-think/think-helper)
+[think-filesystem](https://github.com/top-think/think-filesystem)
+[think-view](https://github.com/top-think/think-view)
+[think-dumper](https://github.com/top-think/think-dumper)
+
+欢迎提交 Issue 或 pr 来帮助改进项目。
