@@ -2,8 +2,12 @@
 使用thinkphp8构建的获取访问ip的api, 可用于动态ip的ddns
 
 ## Demo Api
-  - https://api.silveridc.cn/api/v1/ip
+- https://api.silveridc.cn/api/v1/ip
 
+## 安装
+- php要求:8.0以上,需要fileinfo扩展,推荐安装opcache扩展
+
+- 下载本项目源码,然后在源码目录下 运行composer install即可
 ## 服务器url重写配置
 
 ### Nginx
