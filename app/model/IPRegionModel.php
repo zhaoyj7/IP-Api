@@ -1,11 +1,11 @@
 <?php
-namespace app\api\models;
+namespace app\model;
 use think\Model;
 
 /**
  * @title ip属地模型
  * @desc ip属地模型
- * @use app\api\model\IPRegionModel
+ * @use app\model\IPRegionModel
  */
 class IPRegionModel extends Model
 {

@@ -24,13 +24,13 @@ return [
             // 数据库类型
             'type'            => env('DB_TYPE', 'mysql'),
             // 服务器地址
-            'hostname'        => env('DB_HOST', '127.0.0.1'),
+            'hostname'        => env('DB_HOST', '172.16.1.18'),
             // 数据库名
-            'database'        => env('DB_NAME', ''),
+            'database'        => env('DB_NAME', 'api_test_db'),
             // 用户名
-            'username'        => env('DB_USER', 'root'),
+            'username'        => env('DB_USER', 'api_test_db'),
             // 密码
-            'password'        => env('DB_PASS', ''),
+            'password'        => env('DB_PASS', '4c4h3kD7Mm8ceMTw'),
             // 端口
             'hostport'        => env('DB_PORT', '3306'),
             // 数据库连接参数

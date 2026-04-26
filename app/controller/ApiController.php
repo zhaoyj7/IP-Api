@@ -1,12 +1,15 @@
 <?php
 namespace app\controller;
+use think\facade\Lang;
+use app\model\IPRegionModel;
 
 class ApiController extends BaseController
 {
     public function initialize()
     {
-        \think\facade\Lang::load('../lang/zh-cn.php');
         parent::initialize();
+        Lang::load('../lang/zh-cn.php');
+        $this->IPRegionModel = new IPRegionModel();
     }
 
     /**
@@ -47,6 +50,7 @@ class ApiController extends BaseController
             "status" => 200,
             "msg" => lang("success_message"),
             "ip" => $ip,
+            "region" => $this->IPRegionModel->GetRegion($ip),
         ];
         return json($result);
     }
