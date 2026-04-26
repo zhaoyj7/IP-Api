@@ -32,7 +32,10 @@ class ApiController extends BaseController
      * @title 获取IP地址
      * @desc 获取IP地址
      * @author zhaoyj
+     * @version v1
+     * @url /api/v1/ip
      * @method get
+     * @return json
      * @return int status - 状态码
      * @return string msg - 提示信息
      * @return string ip - ip地址
