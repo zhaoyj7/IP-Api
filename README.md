@@ -1,5 +1,7 @@
 # IP-Api
 - 使用thinkphp8构建的获取访问ip的api, 可用于动态ip的ddns
+## 调用方式
+- /api/v1/ip
 ## Demo Api
 - https://api.silveridc.cn/api/v1/ip
 ## 安装
