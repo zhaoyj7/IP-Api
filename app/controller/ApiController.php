@@ -15,7 +15,7 @@ class ApiController extends BaseController
     /**
      * @title 未命中路由处理
      * @desc 未命中路由处理
-     * @author silveridc
+     * @author zhaoyj
      * @version v1
      * @return json
      * @return int status - 状态码
@@ -32,26 +32,32 @@ class ApiController extends BaseController
         return json($result,404);
     }
     /**
-     * @title 获取IP地址
-     * @desc 获取IP地址
+     * @title 获取访问ip
+     * @desc 获取访问ip
      * @author zhaoyj
      * @version v1
      * @url /api/v1/ip
      * @method get
      * @return json
-     * @return int status - 状态码
-     * @return string msg - 提示信息
+     * @return int status - 状态码,200ok
+     * @return string messages - 提示信息
      * @return string ip - ip地址
+     * @return info.Country - 国家
+     * @return info.Province - 省
+     * @return info.City - 市
      */
     public function GetIP()
     {
         $ip = $this->request->ip();
+        $Region = $this->IPRegionModel->GetRegion($ip);
         $result = [
             "status" => 200,
-            "msg" => lang("success_message"),
+            "messages" => lang("success_message"),
             "ip" => $ip,
-            "region" => $this->IPRegionModel->GetRegion($ip),
+            "info" => $Region,
+            "time" => time(),
         ];
+        //返回数据
         return json($result);
     }
 }

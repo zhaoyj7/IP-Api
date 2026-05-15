@@ -24,7 +24,7 @@ return [
             // 数据库类型
             'type'            => env('DB_TYPE', 'mysql'),
             // 服务器地址
-            'hostname'        => env('DB_HOST', '172.16.1.18'),
+            'hostname'        => env('DB_HOST', '172.21.1.18'),
             // 数据库名
             'database'        => env('DB_NAME', 'api_test_db'),
             // 用户名
