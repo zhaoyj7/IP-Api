@@ -21,13 +21,12 @@ location / {
 ### Apache
 - public下已有htaccess
 ## 使用btpanel 
-- 请在网站->添加站点新建 数据库无要求 把Regions.sql导入进去 然后把.env里的配置改成你自己的或者在config/database.php里改成你自己的 PHP版本8.0+
+- 请在网站->添加站点新建 PHP版本8.0+
 - 创建完成后 在网站的配置->网站目录->运行目录下 把/选择为/public
 - 若使用nginx 请 在新建的这个站点的配置->伪静态内 填入上方nginx的url重写配置
 ## 内嵌server
 - 命令行执行composer install后,不要退出目录 在目录下 执行php think run命令即可启动
 - 若默认端口提示被占用 可执行php think run -p 你要指定的端口
-### 若不需要查询ip对应国家 可手动注释掉 app\controller\ApiController.php里的关于$this->IPRegionModel的调用
 ## 致谢:
 [thinkphp](https://github.com/top-think/think)
 [think-orm](https://github.com/top-think/think-orm)
@@ -36,4 +35,5 @@ location / {
 [think-filesystem](https://github.com/top-think/think-filesystem)
 [think-view](https://github.com/top-think/think-view)
 [think-dumper](https://github.com/top-think/think-dumper)
+[IP2Region](https://github.com/zoujingli/ip2region)
 欢迎提交 Issue 或 pr 来帮助改进项目。
